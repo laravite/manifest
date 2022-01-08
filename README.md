@@ -5,7 +5,7 @@
 > This is currently a work in progress.
 
 **Manifest** is a tiny PHP library designed to parse and extract useful data
-from Vite manifest files.
+from [Vite](https://vitejs.dev) [manifest files](https://vitejs.dev/guide/backend-integration.html).
 
 ## Installation
 
