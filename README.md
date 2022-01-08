@@ -14,3 +14,6 @@ the following command to install it.
 composer require laravite/manifest
 ```
 
+## License
+
+**Manifest** is an open source library licensed under the [MIT License](LICENSE.md).
