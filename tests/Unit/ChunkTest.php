@@ -3,7 +3,6 @@
 namespace Laravite\Manifest\Test\Unit;
 
 use Laravite\Manifest\Chunk;
-use PHPUnit\Framework\TestCase;
 
 class ChunkTest extends TestCase
 {
