@@ -11,8 +11,8 @@ class Chunk
      * @param string|null $src
      * @param array<string> $css
      * @param array<string> $assets
-     * @param array<Chunk> $imports
-     * @param array<Chunk> $dynamicImports
+     * @param array<string> $imports
+     * @param array<string> $dynamicImports
      */
     public function __construct(
         public readonly string $file,
