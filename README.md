@@ -2,6 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/laravite/manifest)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/laravite/manifest)
+![Packagist Downloads](https://img.shields.io/packagist/dt/laravite/manifest)
 
 > This is currently a work in progress.
 
