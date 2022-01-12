@@ -26,7 +26,7 @@ class Manifest
      */
     public function entry(string $name): Chunk
     {
-        return $this->chunks[$name] ?? throw new EntryNotFound($name);
+        return $this->entries[$name] ?? throw new EntryNotFound($name);
     }
 
     /**

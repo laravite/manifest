@@ -50,6 +50,6 @@ class ManifestTest extends TestCase
     {
         $manifest = $this->getTestManifest();
         $this->expectException(Exception::class);
-        $manifest->entry('does-not-exist.js');
+        $manifest->entry('_shared.83069a53.js');
     }
 }
