@@ -4,8 +4,6 @@
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/laravite/manifest)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/laravite/manifest)
 
-> This is currently a work in progress.
-
 **Manifest** is a tiny PHP library designed to parse and extract useful data
 from [Vite](https://vitejs.dev) [manifest files](https://vitejs.dev/guide/backend-integration.html).
 
