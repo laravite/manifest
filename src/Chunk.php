@@ -15,13 +15,13 @@ class Chunk
      * @param array<string> $dynamicImports
      */
     public function __construct(
-        public readonly string $file,
-        public readonly bool $isEntry = false,
-        public readonly bool $isDynamicEntry = false,
-        public readonly ?string $src = null,
-        public readonly array $css = [],
-        public readonly array $assets = [],
-        public readonly array $imports = [],
-        public readonly array $dynamicImports = [],
+        public string $file,
+        public bool $isEntry = false,
+        public bool $isDynamicEntry = false,
+        public ?string $src = null,
+        public array $css = [],
+        public array $assets = [],
+        public array $imports = [],
+        public array $dynamicImports = [],
     ) {}
 }
