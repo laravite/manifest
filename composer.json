@@ -1,8 +1,8 @@
 {
     "name": "laravite/manifest",
+    "type": "library",
     "description": "Framework-agnostic library for parsing Vite manifest files",
     "license": "MIT",
-    "type": "library",
     "authors": [
         {
             "name": "Nicolas Hedger",
@@ -17,7 +17,11 @@
         "phpstan/phpstan": "^1.4",
         "phpunit/phpunit": "^9.5.18"
     },
-    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
     "autoload": {
         "psr-4": {
             "Laravite\\Manifest\\": "src/"
@@ -28,11 +32,7 @@
             "Laravite\\Manifest\\Test\\": "tests/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        }
-    },
+    "minimum-stability": "stable",
     "scripts": {
         "analyse": "phpstan analyse --configuration phpstan.neon.dist",
         "ci:test": "phpunit --configuration phpunit.xml.dist --coverage-clover coverage.xml",
