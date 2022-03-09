@@ -15,6 +15,26 @@
 composer require laravite/manifest
 ```
 
+## Usage
+
+**Manifest** is straightforward to use.
+
+```php
+// Parse a JSON-encoded manifest
+$manifest = Manifest::parse($json);
+
+// Retrieve entries
+$allEntries = $manifest->entries;
+$mainEntry = $manifest->entry('main.js');
+
+// Retrieve chunks
+$allChunks = $manifest->chunks;
+$mainChunk = $manifest->chunk('main.js');
+```
+
+`Chunk` objects expose the following properties `file`, `isEntry`, `isDynamicEntry`, 
+`src`, `css`, `assets`, `imports`, `dynamicImports`. Most of these properties are actually
+optional, and will return `null` if they are not present on the chunk.
 
 ## License
 
