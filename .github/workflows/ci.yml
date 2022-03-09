@@ -28,7 +28,7 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
       - name: Install dependencies
-        run: composer install --prefer-${{ matrix.stability }} --prefer-dist --no-interaction
+        run: composer update --prefer-${{ matrix.stability }} --prefer-dist --no-interaction
       - name: Run tests
         run: composer ci:test
 
@@ -52,6 +52,6 @@ jobs:
         run: |
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
       - name: Install dependencies
-        run: composer install --prefer-dist --no-interaction
+        run: composer update --prefer-dist --no-interaction
       - name: Run static analysis
         run: composer analyse
