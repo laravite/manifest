@@ -2,6 +2,7 @@
 
 namespace Laravite\Manifest;
 
+use Composer\InstalledVersions;
 use Laravite\Manifest\Exception\UnableToFindChunk;
 use Laravite\Manifest\Exception\UnableToFindEntry;
 use Laravite\Manifest\Exception\UnableToParse;
@@ -22,12 +23,22 @@ final class Manifest
     /**
      * Parses a JSON Vite manifest
      */
-    public static function parse(string $json): Manifest
+    public static function parse(string $json, bool $validate = true): Manifest
     {
         $manifest = match ($rawChunks = json_decode($json, true)) {
             null => throw new UnableToParse('The JSON payload is invalid'),
             default => $rawChunks,
         };
+
+        if (InstalledVersions::isInstalled('opis/json-schema') && $validate) {
+            $validator = new \Opis\JsonSchema\Validator();
+            if($validator->validate(
+                json_decode($json),
+                file_get_contents(__DIR__ . '/../schema/manifest.schema.json')
+            )->hasError()) {
+                throw new UnableToParse('The manifest does not validate against the schema');
+            }
+        }
 
         return Transformer::transform($manifest);
     }

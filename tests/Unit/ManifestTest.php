@@ -90,4 +90,10 @@ final class ManifestTest extends TestCase
         $manifest = Manifest::parse($this->getTestManifestAsJson());
         $manifest->entry('test.js');
     }
+
+    public function test_it_validates_the_manifest_against_the_schema(): void
+    {
+        $this->expectException(UnableToParse::class);
+        Manifest::parse('{}', true);
+    }
 }
