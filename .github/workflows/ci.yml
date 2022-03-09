@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Normalize composer.json
-        run: docker://ergebnis/composer-normalize-action:latest
+        uses: docker://ergebnis/composer-normalize-action:latest
       - name: Commit normalized composer.json
         uses: EndBug/add-and-commit@v8
         with:
