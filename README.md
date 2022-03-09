@@ -36,6 +36,16 @@ $mainChunk = $manifest->chunk('main.js');
 `src`, `css`, `assets`, `imports`, `dynamicImports`. Most of these properties are actually
 optional, and will return `null` if they are not present on the chunk.
 
+## Manifest validation
+
+**Manifest** can optionally validate the Vite manifest against its JSON schema to ensure
+that it is valid. To enable validation, installed the suggested `opis/json-schema` package and
+pass `true` to the `parse` method.
+
+```php
+$manifest = Manifest::parse($json, validate: true);
+```
+
 ## License
 
 **Manifest** is open-sourced software licensed under the [MIT license].
