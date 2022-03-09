@@ -53,5 +53,5 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
       - name: Install dependencies
         run: composer update --prefer-stable --prefer-dist --no-interaction
-      - name: Run tests
+      - name: Run static analysis
         run: composer analyse
