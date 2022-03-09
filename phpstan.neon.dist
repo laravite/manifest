@@ -3,3 +3,6 @@ parameters:
     paths:
       - src
       - tests
+    ignoreErrors:
+        - message: '#Offset 0 does not exist on array<Laravite\\Manifest\\Chunk>\|null#'
+          path: tests/Unit/TransformerTest.php

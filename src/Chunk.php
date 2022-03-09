@@ -7,10 +7,10 @@ namespace Laravite\Manifest;
  * @property-read ?bool $isEntry
  * @property-read ?bool $isDynamicEntry
  * @property-read ?string $src
- * @property-read string[] $css
- * @property-read string[] $assets
- * @property-read Chunk[] $imports
- * @property-read Chunk[] $dynamicImports
+ * @property-read ?string[] $css
+ * @property-read ?string[] $assets
+ * @property-read ?Chunk[] $imports
+ * @property-read ?Chunk[] $dynamicImports
  */
 final class Chunk
 {
