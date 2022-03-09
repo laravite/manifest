@@ -35,6 +35,7 @@
     },
     "scripts": {
         "analyse": "phpstan analyse --configuration phpstan.neon.dist",
-        "test": "phpunit --configuration phpunit.xml.dist"
+        "test": "phpunit --configuration phpunit.xml.dist",
+        "ci:test": "phpunit --configuration phpunit.xml.dist --coverage-clover coverage.xml"
     }
 }

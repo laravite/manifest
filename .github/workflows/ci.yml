@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: composer update --prefer-${{ matrix.stability }} --prefer-dist --no-interaction
       - name: Run tests
-        run: composer test
+        run: composer ci:test
 
   # Static Analysis
   analyse:
