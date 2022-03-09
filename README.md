@@ -39,8 +39,8 @@ optional, and will return `null` if they are not present on the chunk.
 ## Manifest validation
 
 **Manifest** can optionally validate the Vite manifest against its JSON schema to ensure
-that it is valid. To enable validation, installed the suggested `opis/json-schema` package and
-pass `true` to the `parse` method.
+that it is valid. To enable validation, install the suggested `opis/json-schema` package and
+pass `true` to the `validate` parameter.
 
 ```php
 $manifest = Manifest::parse($json, validate: true);
