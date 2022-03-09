@@ -12,14 +12,14 @@
     "require": {
         "php": "^8.1"
     },
-    "suggest": {
-        "opis/json-schema": "Allows validating the Vite manifest against a JSON schema"
-    },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23",
+        "opis/json-schema": "^2.3",
         "phpstan/phpstan": "^1.4",
-        "phpunit/phpunit": "^9.5.18",
-        "opis/json-schema": "^2.3"
+        "phpunit/phpunit": "^9.5.18"
+    },
+    "suggest": {
+        "opis/json-schema": "Allows validating the Vite manifest against a JSON schema"
     },
     "config": {
         "allow-plugins": {
