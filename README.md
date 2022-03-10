@@ -36,6 +36,10 @@ $mainChunk = $manifest->chunk('main.js');
 `src`, `css`, `assets`, `imports`, `dynamicImports`. Most of these properties are actually
 optional, and will return `null` if they are not present on the chunk.
 
+If the chunks of the parsed manifest contain additional fields, they will also be exposed
+on the `Chunk` object. This make **Manifest** compatible with plugins that extend the original
+manifest file.
+
 ## Manifest validation
 
 **Manifest** can optionally validate the Vite manifest against its JSON schema to ensure
