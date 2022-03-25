@@ -96,4 +96,15 @@ final class ManifestTest extends TestCase
         $this->expectException(UnableToParse::class);
         Manifest::parse('{}', true);
     }
+
+    public function test_it_does_not_validate_the_manifest_against_the_schema(): void
+    {
+        $this->assertInstanceOf(Manifest::class, Manifest::parse('{}', false));
+    }
+
+    public function test_it_validates_the_manifest_against_the_schema_by_default(): void
+    {
+        $this->expectException(UnableToParse::class);
+        $this->assertInstanceOf(Manifest::class, Manifest::parse('{}'));
+    }
 }

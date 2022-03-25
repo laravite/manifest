@@ -11,6 +11,7 @@ jobs:
   composer-normalize:
     name: Normalize composer.json
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,7 +23,7 @@ jobs:
           message: Normalize composer.json
 
   # Unit tests
-  test:
+  unit-tests:
     name: PHP ${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -45,8 +46,10 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
       - name: Install dependencies
         run: composer update --prefer-${{ matrix.stability }} --prefer-dist --no-interaction
-      - name: Run tests
-        run: composer ci:test
+      - name: Run unit tests
+        run: composer test
+      - name: Run mutation tests
+        run: composer infection
 
   # Static Analysis
   analyse:

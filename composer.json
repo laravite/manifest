@@ -14,6 +14,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23",
+        "infection/infection": "^0.26.6",
         "opis/json-schema": "^2.3",
         "phpstan/phpstan": "^1.4",
         "phpunit/phpunit": "^9.5.18"
@@ -23,7 +24,8 @@
     },
     "config": {
         "allow-plugins": {
-            "ergebnis/composer-normalize": true
+            "ergebnis/composer-normalize": true,
+            "infection/extension-installer": true
         }
     },
     "autoload": {
@@ -39,7 +41,7 @@
     "minimum-stability": "stable",
     "scripts": {
         "analyse": "phpstan analyse --configuration phpstan.neon.dist",
-        "ci:test": "phpunit --configuration phpunit.xml.dist --coverage-clover coverage.xml",
+        "infection": "infection --coverage=",
         "test": "phpunit --configuration phpunit.xml.dist"
     }
 }
