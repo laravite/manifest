@@ -20,7 +20,7 @@
             <html outputDirectory="build/coverage/html-coverage"/>
         </report>
     </coverage>
-    
+
     <logging>
         <junit outputFile="build/coverage/junit.xml"/>
     </logging>
