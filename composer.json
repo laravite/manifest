@@ -41,7 +41,7 @@
     "minimum-stability": "stable",
     "scripts": {
         "analyse": "phpstan analyse --configuration phpstan.neon.dist",
-        "test": "phpunit --configuration phpunit.xml.dist",
-        "infection": "infection --coverage="
+        "infection": "infection --coverage=",
+        "test": "phpunit --configuration phpunit.xml.dist"
     }
 }
